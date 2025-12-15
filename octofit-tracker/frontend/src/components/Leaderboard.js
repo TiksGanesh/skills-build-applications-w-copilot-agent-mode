@@ -8,8 +8,8 @@ const Leaderboard = () => {
   const [selected, setSelected] = useState(null);
 
   const codespace = process.env.REACT_APP_CODESPACE_NAME;
-  const base = codespace ? `https://${codespace}-8000.app.github.dev` : 'http://localhost:8000';
-  const url = `${base}/api/leaderboards/`;
+  const url = codespace ? `https://${codespace}-8000.app.github.dev/api/leaderboards/` : 'http://localhost:8000/api/leaderboards/';
+
 
   const load = () => {
     setLoading(true);

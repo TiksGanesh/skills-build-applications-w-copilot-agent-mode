@@ -8,8 +8,7 @@ const Users = () => {
   const [selected, setSelected] = useState(null);
 
   const codespace = process.env.REACT_APP_CODESPACE_NAME;
-  const base = codespace ? `https://${codespace}-8000.app.github.dev` : 'http://localhost:8000';
-  const url = `${base}/api/users/`;
+  const url = codespace ? `https://${codespace}-8000.app.github.dev/api/users/` : 'http://localhost:8000/api/users/';
 
   const load = () => {
     setLoading(true);

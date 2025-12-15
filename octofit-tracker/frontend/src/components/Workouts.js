@@ -8,8 +8,8 @@ const Workouts = () => {
   const [selected, setSelected] = useState(null);
 
   const codespace = process.env.REACT_APP_CODESPACE_NAME;
-  const base = codespace ? `https://${codespace}-8000.app.github.dev` : 'http://localhost:8000';
-  const url = `${base}/api/workouts/`;
+  const url = codespace ? `https://${codespace}-8000.app.github.dev/api/workouts/` : 'http://localhost:8000/api/workouts/';
+
 
   const load = () => {
     setLoading(true);
