@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+/* OctoFit Tracker theme overrides (on top of Bootstrap) */
+:root {
+  --octo-bg: linear-gradient(180deg, #0b132b 0%, #1c2541 60%, #3a506b 100%);
+  --octo-surface: #0e1726;
+  --octo-primary: #5bc0be;
+  --octo-secondary: #ffd166;
+  --octo-accent: #ef476f;
+  --octo-text: #e6f1ff;
+  --octo-muted: #9fb3c8;
+  --octo-table-stripe: rgba(91, 192, 190, 0.08);
+}
+
+body {
+  background: var(--octo-bg) fixed;
+  color: var(--octo-text);
+}
+
+a, .link-primary { color: var(--octo-primary); }
+a:hover, .link-primary:hover { color: #4bb1af; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--octo-secondary); }
+
+/* Navbar */
+.navbar {
+  background: rgba(14, 23, 38, 0.85) !important;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.navbar-brand, .nav-link { color: var(--octo-text) !important; }
+.nav-link.active, .nav-link:hover { color: var(--octo-primary) !important; }
+
+/* Cards */
+.card { background-color: var(--octo-surface); color: var(--octo-text); border: 1px solid rgba(255,255,255,0.06); }
+.card-header { background: rgba(255,255,255,0.03); border-bottom-color: rgba(255,255,255,0.06); }
+
+/* Tables */
+.table { color: var(--octo-text); }
+.table thead th { color: var(--octo-secondary); border-bottom-color: rgba(255,255,255,0.08); }
+.table-striped > tbody > tr:nth-of-type(odd) > * { background-color: var(--octo-table-stripe); }
+.table-hover > tbody > tr:hover > * { background-color: rgba(255,255,255,0.04); }
+
+/* Buttons */
+.btn-primary { background-color: var(--octo-primary); border-color: var(--octo-primary); color: #0b132b; }
+.btn-primary:hover { background-color: #4bb1af; border-color: #4bb1af; }
+.btn-outline-secondary { color: var(--octo-text); border-color: rgba(255,255,255,0.2); }
+.btn-outline-secondary:hover { background: rgba(255,255,255,0.08); }
+
+/* Forms */
+.form-control { background-color: #0b1324; border-color: rgba(255,255,255,0.1); color: var(--octo-text); }
+.form-control:focus { background-color: #0b1324; color: var(--octo-text); border-color: var(--octo-primary); box-shadow: 0 0 0 .2rem rgba(91, 192, 190, .15); }
+
+/* Modals */
+.modal-content { background-color: var(--octo-surface); color: var(--octo-text); border: 1px solid rgba(255,255,255,0.06); }
+.modal-header { border-bottom-color: rgba(255,255,255,0.06); }
+.modal-footer { border-top-color: rgba(255,255,255,0.06); }
+
+/* Brand logo */
+.brand-logo {
+  height: 28px;
+  width: auto;
+  margin-right: .5rem;
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.35));
+}
+
+/* Utility */
+.text-muted-custom { color: var(--octo-muted) !important; }
